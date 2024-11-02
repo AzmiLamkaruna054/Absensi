@@ -21,7 +21,53 @@
     />
     <link rel="stylesheet" href="daftar.css" />
     <title>Halaman Loading</title>
-    <script>
+    <script type="module">
+      // Import Firebase SDKs
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
+      import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore.js";
+
+      // Firebase configuration
+      const firebaseConfig = {
+          apiKey: "AIzaSyDZEj0smJwH0il4c1GJWTFUoMfQGEawTOQ",
+          authDomain: "absen-d19bb.firebaseapp.com",
+          projectId: "absen-d19bb",
+          storageBucket: "absen-d19bb.firebasestorage.app",
+          messagingSenderId: "225809570326",
+          appId: "1:225809570326:web:05375a0958ff8b3023f337",
+          measurementId: "G-V87HTB02C6"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app); // Initialize Firestore
+
+      // Function to add user data to Firestore
+      async function addUser(name, division, id) {
+          try {
+              const docRef = await addDoc(collection(db, "users"), {
+                  name: name,
+                  division: division,
+                  id: id
+              });
+              console.log("Document written with ID: ", docRef.id);
+          } catch (e) {
+              console.error("Error adding document: ", e);
+          }
+      }
+
+      // Event listener for the form submission
+      document.addEventListener('DOMContentLoaded', () => {
+          document.querySelector('.form').addEventListener('submit', (event) => {
+              event.preventDefault(); // Prevent page reload
+
+              const name = document.querySelector('.form-input[placeholder="NAMA"]').value;
+              const division = document.querySelector('.form-input[placeholder="DIVISI"]').value;
+              const id = document.querySelector('.form-input[placeholder="ID"]').value;
+
+              addUser(name, division, id); // Call function to add data to Firestore
+          });
+      });
+
       // Fungsi untuk menyesuaikan tinggi viewport secara dinamis
       function adjustVH() {
         let vh = window.innerHeight * 0.01;

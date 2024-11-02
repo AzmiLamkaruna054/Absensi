@@ -78,3 +78,8 @@ body {
   background-color: #fd082f; /* Background footer kartu kedua */
   color: white; /* Warna teks putih */
 }
+
+.custom-btn {
+  background-color: black;
+
+}
