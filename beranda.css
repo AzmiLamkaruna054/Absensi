@@ -1,6 +1,6 @@
 body {
   /* Menambahkan gambar background */
-  background-image: url("/assets/bg.png");
+  background-image: url("bg.png");
   background-size: cover; /* Membuat gambar memenuhi seluruh layar */
   background-position: center; /* Menempatkan gambar di tengah */
   background-repeat: no-repeat; /* Mencegah pengulangan gambar */
