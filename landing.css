@@ -1,0 +1,17 @@
+body {
+    /* Menambahkan gambar background */
+    background-image: url("/bg.png");
+    background-size: cover; /* Membuat gambar memenuhi seluruh layar */
+    background-position: center; /* Menempatkan gambar di tengah */
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+    background-attachment: fixed; /* Agar background tetap di tempat saat scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .logo-container {
+    text-align: center;
+    margin-bottom: 50px; /* Naikkan logo dengan menambahkan margin-bottom negatif */
+  }

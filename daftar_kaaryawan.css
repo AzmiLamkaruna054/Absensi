@@ -1,0 +1,47 @@
+body {
+  /* Menambahkan gambar background */
+  background-image: url("/assets/bg.png");
+  background-size: cover; /* Membuat gambar memenuhi seluruh layar */
+  background-position: center; /* Menempatkan gambar di tengah */
+  background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+  background-attachment: fixed; /* Agar background tetap di tempat saat scrolling */
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif; /* Menggunakan font Roboto di seluruh halaman */
+}
+
+.logo-container {
+  text-align: right; /* Mengatur agar logo berada di tengah secara horizontal */
+  padding-top: 10px; /* Atur jarak dari atas sesuai kebutuhan */
+}
+
+.logo {
+  width: 130px; /* Sesuaikan lebar */
+  height: 60px; /* Menjaga proporsi gambar */
+  max-width: 100%; /* Agar responsif */
+  margin-right: 10px;
+}
+.text h1 {
+  font-size: 20px; /* Ukuran font untuk judul */
+  text-align: center; /* Mengatur teks agar berada di tengah */
+  color: black; /* Menentukan warna teks agar terlihat di atas background */
+  margin-top: 120px; /* Memberikan jarak pada bagian atas teks */
+}
+/* Tambahkan ini untuk mengatur posisi card di sebelah kanan */
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem; /* Lebar tombol */
+  height: 40px; /* Tinggi tombol */
+  background-color: #fd082f;
+  color: #ffffff;
+  text-align: center;
+  margin-left: auto; /* Mendorong card ke kanan */
+}
+
+.card-link {
+  text-decoration: none;
+  color: #ffffff;
+}
